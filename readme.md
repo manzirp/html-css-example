@@ -7,5 +7,10 @@ this repo contain many example of my research for :
 - SASS
 
 in this repo I learn about:
-- *css polygon*
-- *css transformation and transition*
+- css polygon
+- css transformation and transition
+- css grid & flex-box
+- es6
+- javascript functional 
+- svg & css
+- js drag & drop

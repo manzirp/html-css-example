@@ -1,0 +1,143 @@
+$primaryColor: #DCF5FF;
+$secondaryColor: #00B6FF;
+$brightColor: white;
+$gradientColor: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+$greedColor: #9bdc28;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    @include flexCenter();
+    background: $gradientColor;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'poppins', 'sans-serif';
+}
+
+.container{
+    position: relative;
+
+    .box{
+        position: relative;
+        width: 320px;
+        height: 400px;
+        background: $secondaryColor;
+        border-radius: 20px;
+        overflow: hidden;
+
+        .imgBox{
+            position: absolute;
+            z-index: 10;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            height: 220px;
+            transition: .5s ease-in-out;
+            margin: 0;
+
+            img{
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-25deg);
+                width: 270px;
+            }
+        }
+
+        .propBox{
+            position: absolute;
+            bottom: 0;
+            z-index: 5;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            transition: 1s;
+
+            h2{
+                margin: 0;
+            }
+
+            .size {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 8px 20px;
+                transition: .5;
+
+                h3{
+                    color: $primaryColor;
+                    font-weight: 300;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-right: 10px;
+                }
+
+                span{
+                    width: 26px;
+                    height: 26px;
+                    text-align: center;
+                    line-height: 26px;
+                    font-size: 14px;
+                    color: #111;
+                    background: $primaryColor;
+                    margin: 0 5px;
+                    transition: .5s;
+                    cursor: pointer;
+                    border-radius: 5px;
+
+                    &:hover{
+                        background: $greedColor;
+                    }
+                }
+            }
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $greedColor;
+            clip-path: circle(150px at 80% 20%);
+            transition: clip-path .5s ease-in-out;
+        }
+
+        &:hover .imgBox{            
+            top: 0%;
+            transform: translateY(0%);
+        }
+
+        &:hover .propBox{
+            height: 150px;
+        }
+
+        &:hover::before{
+            clip-path: circle(300px at 80% -20%);
+        }
+
+        &:hover::after{
+            font-size: 14em;
+        }
+        
+        &::after{
+            content: 'Nike';
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 12em;
+            font-weight: 800;
+            font-style: italic;
+            color: rgba($color: #000000, $alpha: .4);
+            transition: .5s ease-in-out;
+        }
+    }
+
+    
+}

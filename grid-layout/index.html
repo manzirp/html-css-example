@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Test</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="bee-logo.svg" height="70vw" />
+        </div>
+        <div class="menu">
+            <ul>
+                <li>Backgrounds</li>
+                <li>Swatches</li>
+                <li>Blogs</li>
+                <li>Resources</li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <!-- <div class="card card-tall card-wide"
+            style="background-image:url('https://images.unsplash.com/photo-1558981359-219d6364c9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80')">
+            1
+        </div>
+        <div class="card card-tall"
+            style="background-image:url('https://images.unsplash.com/photo-1583585635793-0e1894c169bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=913&q=80')">
+            2
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583531172005-814191b8b6c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80')">
+            3
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583426573939-97d09302d76a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80')">
+            4
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583532452513-a02186582ccd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
+            5
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583445013765-46c20c4a6772?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
+            6
+        </div>
+        <div class="card card-wide"
+            style="background-image:url('https://images.unsplash.com/photo-1583562835057-a62d1beffbf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=949&q=80')">
+            7
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583483425010-c566431a7710?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80')">
+            8
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583500557349-fb5238f8d946?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80')">
+            9
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583468323330-9032ad490fed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80')">
+            10
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583425423320-2386622cd2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80')">
+            11
+        </div>
+        <div class="card"
+            style="background-image:url('https://images.unsplash.com/photo-1583518257225-f9a8081f6a84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
+            12
+        </div> -->
+    </main>
+    <footer></footer>
+</body>
+
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /* background-image: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%); */
+        background: rgb(238, 62, 48);
+        background: linear-gradient(20deg, rgba(238, 62, 48, 1) 0%, rgba(245, 139, 31, 1) 35%, rgb(255, 216, 99) 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    body::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: #1e1e24;
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background: #6649b8;
+    }
+
+    nav {
+        height: 10vh;
+        width: 100vw;
+        display: flex;
+    }
+
+    nav .logo {
+        padding-top: 5px;
+        width: 10vw;
+        text-align: end;
+    }
+
+    nav .menu {
+        width: 90vw;
+    }
+
+    .menu ul{
+        font-family: 'poppins';
+        font-size: 12px;
+        list-style: none;        
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 10px;
+        color: #fff;
+    }
+
+    .menu ul li{
+        margin-left: 1vw;
+        padding: 10px;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        box-shadow: 0 3px 5px rgba(16, 173, 194, 0.2);
+        transition: box-shadow .5s ease-in-out;
+    }
+
+    main {
+        padding-top: 1rem;
+        display: grid;
+        gap: 1rem;
+
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 240px;
+        transition: all .5s ease-in-out;
+    }
+
+    footer {
+        height: 10vh;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #353535;
+        font-size: 3rem;
+        color: #fff;
+        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        transition: all .5s ease-in-out;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .card:hover {
+        box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35rem 1.175rem, rgba(2, 8, 20, 0.08) 0px 0.175rem 0.5rem;
+        transform: translateY(-3px) scale(1.1);
+    }
+
+
+    @media screen and (min-width: 600px) {
+        .card-tall {
+            grid-row: span 2 / auto;
+        }
+
+        .card-wide {
+            grid-column: span 2 / auto;
+        }
+    }
+</style>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 - learning</title>
+</head>
+<body>
+    <h2>Please see console in developer panel (f12)</h2>
+</body>
+</html>
+
+<script>
+/*inherit vars*/
+const user = {
+    firstname: 'nazir',
+    lastname: 'piliang',
+    age: 35,
+    sayName: function() {
+        console.log(`My name is ${this.firstname}`)
+        const fullName = () => { /*  an ArrowFunction will inherit `this` variable inside the bracket funtion */
+            console.log(`My full name is ${this.firstname} ${this.lastname}`)
+        }
+        fullName()
+    }
+}
+user.sayName()
+
+/*object destruction */
+const list = {
+    title: 'groceries',
+    shoppingList: ['apple', 'sugar', 'olive oil']
+}
+
+const {title, shoppingList} = list
+console.log(title, shoppingList)
+
+//foreach
+const arrShop = ['Milk', 'Eggs', 'Meats', 'Banana', 'Choco']
+arrShop.forEach((item, index) =>{
+    console.log(`The ${item} has index ${index}`)
+})
+
+//map
+const mapList = arrShop.map(item => {
+    if(item == 'Eggs') return item + ' new'
+})
+console.log(mapList)
+
+//filter
+const filterList = arrShop.filter(item => {
+    return item == 'Eggs'
+})
+console.log(filterList)
+
+/*OOP class*/
+class Shopping{
+    constructor(items, num){
+        this.items = items;
+        this.num = num
+    }
+
+    sayList(){
+        console.log(this.items)
+    }
+}
+
+const myList = new Shopping(['milk', 'choco', 'redbull'], 3)
+console.log(myList)
+myList.sayList()
+
+class Product extends Shopping{
+    constructor(items, num, amount, cost){
+        super(items, num)
+        this.amount = amount
+        this.cost = cost
+    }
+}
+
+const myProduct = new Product(['milk', 'eggs', 'kratingdaeng'], 3, 20, 54.5)
+console.log(myProduct)
+myProduct.sayList()
+
+/*Promises*/
+async function checkUser(param){
+    return new Promise((resolve, reject) => {
+        if(param <= 0) reject(new Error('some thing wrong !'))
+        setTimeout(() => {
+            resolve({user: 'mnazirp', pass: '6sdfw8fs7efe7we8'})
+        }, 2000);
+    })
+}
+
+checkUser(1).then(rs => console.log(rs))
+.catch(err => console.log(err))
+
+
+</script>

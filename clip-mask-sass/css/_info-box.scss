@@ -1,0 +1,33 @@
+.inner{
+    background: $secondaryColor;
+    padding: 1em;
+    border-radius: 10px;
+    width: 250px;
+    clip-path: circle(10% at 90% 15%);
+    transition: clip-path .5s ease-in-out;
+    cursor: pointer;
+
+    span{
+        float: right;
+        color: $brightColor;
+        font-weight: bold;
+        transition: color .5s;
+        position: relative;
+        margin-right: 4%;
+        margin-top: 1%;
+    }
+
+    h1{
+        color: $brightColor;
+        margin: 0;
+    }
+
+    p{
+        color: $brightColor;
+        font-size: .8rem;
+    }
+
+    &:hover{
+        clip-path: circle(75%);
+    }
+}

@@ -1,0 +1,158 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a6c1ee));
+  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'poppins', 'sans-serif';
+}
+
+.container {
+  position: relative;
+}
+
+.container .box {
+  position: relative;
+  width: 320px;
+  height: 400px;
+  background: #00B6FF;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container .box .imgBox {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 220px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  margin: 0;
+}
+
+.container .box .imgBox img {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-25deg);
+          transform: translate(-50%, -50%) rotate(-25deg);
+  width: 270px;
+}
+
+.container .box .propBox {
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.container .box .propBox h2 {
+  margin: 0;
+}
+
+.container .box .propBox .size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 20px;
+  -webkit-transition: .5;
+  transition: .5;
+}
+
+.container .box .propBox .size h3 {
+  color: #DCF5FF;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-right: 10px;
+}
+
+.container .box .propBox .size span {
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  color: #111;
+  background: #DCF5FF;
+  margin: 0 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .box .propBox .size span:hover {
+  background: #9bdc28;
+}
+
+.container .box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  -webkit-clip-path: circle(150px at 80% 20%);
+          clip-path: circle(150px at 80% 20%);
+  -webkit-transition: -webkit-clip-path .5s ease-in-out;
+  transition: -webkit-clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out;
+  transition: clip-path .5s ease-in-out, -webkit-clip-path .5s ease-in-out;
+}
+
+.container .box:hover .imgBox {
+  top: 0%;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.container .box:hover .propBox {
+  height: 150px;
+}
+
+.container .box:hover::before {
+  -webkit-clip-path: circle(300px at 80% -20%);
+          clip-path: circle(300px at 80% -20%);
+}
+
+.container .box:hover::after {
+  font-size: 14em;
+}
+
+.container .box::after {
+  content: 'Nike';
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+/*# sourceMappingURL=nike.css.map */

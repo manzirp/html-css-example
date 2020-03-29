@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make Shape from CSS</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+</head>
+<body>
+    <img src="bee-logo.png" alt="logo" width="50px" class="logo" >
+    <main>
+        <div class="section-1">
+            <nav>
+                <div class="menu"><i class="fab fa-2x fa-autoprefixer"></i> Home</div>
+                <div class="menu"><i class="fab fa-2x fa-codiepie"></i> Portfolio</div>
+                <div class="menu"><i class="fab fa-2x fa-codepen"></i> Clients</div>
+                <div class="menu"><i class="fab fa-2x fa-phoenix-squadron"></i> Contact</div>
+            </nav>
+            <div class="circle-foto">
+            </div>
+            <span class="name">Muhammad Nazir P</span>
+            <div class="shape01"></div>
+        </div>
+        <div class="section-2"></div>
+        <div class="section-3"></div>
+        <div class="section-4"></div>
+        <div class="section-5"></div>
+    </main>
+</body>
+</html>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+}
+
+.logo{
+    position: absolute;
+}
+
+main{
+    width: 80vw;
+    min-height: 100vh;
+    padding-top: 40px;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-1{
+    background-color: #fff;
+    padding-top: 10px;
+    box-shadow: 0 3px 5px rgba(255, 101, 47, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .7s ease-in-out;
+}
+
+.section-1:hover{
+    padding-top: 50px;
+}
+
+.section-1 nav{
+    align-self: flex-end;
+    position: absolute;
+    top: 15vh;
+    right: 10vw;
+    display: flex;
+    z-index: 3;
+    font-family: 'poppins';
+    font-size: 12px;
+}
+
+nav .menu{
+    padding: 5px;
+    margin-right: 1px;
+    color: #931A3C;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    /* background-image: linear-gradient(150deg, #ffffff 40%, #fee140 100%); */
+    /* border-radius: 5px; */
+
+}
+
+nav .menu:hover{
+    /* background-image: linear-gradient(150deg, #ffffff 40%, #fee140 100%); */
+    box-shadow: 0 3px 5px rgba(255, 101, 47, .2);
+    border-radius: 5px;
+
+}
+
+nav .menu i{
+    padding: 2px;
+    margin: 2px;
+    color: #931A3C;
+    border: none;
+}
+
+.circle-foto{
+    height: 100px;
+    width: 100px;
+    background: url('foto.jpg') center center;
+    background-size: 90%;
+    position: relative;
+    z-index: 1;
+    border: 3px solid rgba(221, 139, 6, 0.1);
+    border-radius: 50%;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.circle-foto:hover{
+    border: 9px solid rgba(221, 139, 6, 0.5);
+}
+
+.section-1 .name{
+    position: relative;
+    top: 30%;
+    z-index: 3;
+    font-family: 'poppins';
+    font-size: 15px;
+    color: rgb(73, 77, 92);
+    font-weight: 500;
+}
+
+.shape01{
+    background-color: red;
+    position: relative;
+    width: 150px;
+    z-index: 0;
+}
+
+.shape01::before, .shape01::after{
+    position: absolute;
+    bottom: 0;
+    content: '';
+    height: 150px;
+    width: 150px;
+    transition: all .3s ease-in-out;
+}
+
+.shape01::before{
+    left: 50%;
+    background-color: #fff;
+    transform: skew(0, -20deg);
+}
+
+.shape01::after{
+    right: 50%;
+    background-color: #fff;
+    transform: skew(0, 20deg);
+}
+
+@media screen and (max-width: 600px) {
+    .section-1 nav{
+        flex-direction: column;
+        top: 8vh;
+    }
+
+    .section-1 .menu{
+        margin-top: 1px;
+    }
+}
+
+
+</style>

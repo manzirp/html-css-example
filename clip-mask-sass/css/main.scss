@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./info-box";
+
+@mixin gridAlign($align) {    
+    display: grid;
+    justify-items: $align;
+    align-items: $align;
+}
+
+body{
+    @include gridAlign(center);
+    
+    background: $gradientColor;
+    margin: 0;
+    height: 100vh;
+    font-family: 'poppins', 'sans-serif';
+}

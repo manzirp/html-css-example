@@ -1,4 +1,7 @@
 **welcome to HTML & CSS example**
+===
+
+`feel free to explore, fork, or modif this repo`
 
 this repo contain many example of my research for :
 - HTML
